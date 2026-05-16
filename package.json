@@ -1,0 +1,24 @@
+{
+  "name": "covid-policy-viz",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "intersection-observer": "^0.12.2",
+    "pinia": "^3.0.4",
+    "scrollama": "^3.2.0",
+    "topojson-client": "^3.1.0",
+    "vue": "^3.5.32",
+    "vue-router": "^5.0.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.5",
+    "vite": "^8.0.4"
+  }
+}

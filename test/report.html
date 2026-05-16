@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>测试报告 — 病毒与政策项目</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font: 14px/1.6 system-ui, sans-serif; background: #f5f5f5; color: #333; padding: 2rem; }
+  h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .summary { background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .pass-rate { font-size: 3rem; font-weight: 700; color: #4caf50; }
+  table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
+  th, td { padding: 0.6rem 0.8rem; text-align: left; border-bottom: 1px solid #eee; }
+  th { background: #fafafa; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; color: #666; }
+  .pass td { background: #f1f8e9; }
+  .fail td { background: #fef2f2; }
+  .shot-card { background: white; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .shot-name { font-weight: 600; margin-bottom: 0.5rem; }
+  .shot-card img { max-width: 100%; border: 1px solid #eee; border-radius: 4px; }
+</style>
+</head>
+<body>
+<h1>🧪 测试报告 — 病毒与政策项目</h1>
+<p>测试时间: 2026-05-07T17:04:11.180Z | 工具: Playwright</p>
+
+<div class="summary">
+  <h2>整体通过率</h2>
+  <div class="pass-rate">81.6%</div>
+  <p>通过: 31 / 失败: 7 / 总计: 38</p>
+</div>
+
+<h2>分类汇总</h2>
+<table>
+  <tr><th>分类</th><th>场景数</th><th>通过</th><th>失败</th><th>通过率</th></tr>
+  <tr><td>页面加载</td><td>4</td><td>4</td><td>0</td><td>100%</td></tr><tr><td>上篇联动</td><td>3</td><td>1</td><td>2</td><td>33%</td></tr><tr><td>脉冲地图</td><td>5</td><td>4</td><td>1</td><td>80%</td></tr><tr><td>政策时间线</td><td>6</td><td>5</td><td>1</td><td>83%</td></tr><tr><td>下篇联动</td><td>4</td><td>3</td><td>1</td><td>75%</td></tr><tr><td>热力矩阵</td><td>4</td><td>3</td><td>1</td><td>75%</td></tr><tr><td>雷达图</td><td>5</td><td>5</td><td>0</td><td>100%</td></tr><tr><td>多视图联动</td><td>4</td><td>4</td><td>0</td><td>100%</td></tr><tr><td>内容文档</td><td>3</td><td>2</td><td>1</td><td>67%</td></tr>
+</table>
+
+<h2>详细结果</h2>
+<table>
+  <tr><th>ID</th><th>名称</th><th>状态</th><th>详情</th><th>截图</th></tr>
+  <tr class="pass">
+      <td>A1</td><td>Loading 动画与内容显示</td><td>✅ PASS</td><td>加载耗时 1257ms</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>A2</td><td>引导提示淡出</td><td>✅ PASS</td><td>exists=true, faded=true, opacity=0</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>A3</td><td>粘性图表+滚动文字布局</td><td>✅ PASS</td><td></td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>A4</td><td>响应式 1280x720</td><td>✅ PASS</td><td>无溢出</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>B5</td><td>章节1 脉冲地图</td><td>✅ PASS</td><td>activeChart=pulseMap, time=2020-03-11</td>
+      <td>-</td>
+    </tr><tr class="fail">
+      <td>B6</td><td>章节2 时间线对比</td><td>❌ FAIL</td><td>{"activeChart":"policyHeatmap","selectedCountries":["KOR","ITA","USA"]}</td>
+      <td>-</td>
+    </tr><tr class="fail">
+      <td>B7</td><td>章节3 干预窗口+滑块</td><td>❌ FAIL</td><td>slider=true, chart=policyHeatmap, shift=0</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>C8</td><td>≥50国边界</td><td>✅ PASS</td><td>渲染 177 个国家</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>C9</td><td>Canvas粒子层</td><td>✅ PASS</td><td>Canvas 存在且有效</td>
+      <td>-</td>
+    </tr><tr class="fail">
+      <td>C10</td><td>缩放和平移</td><td>❌ FAIL</td><td>初始: null, 缩放后: null</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>C11</td><td>点击国家更新store</td><td>✅ PASS</td><td>selectedCountries: [KOR,ITA,USA,OMN]</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>C12</td><td>响应时间变化</td><td>✅ PASS</td><td>时间切换后地图重渲染</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>D13</td><td>双区域图表</td><td>✅ PASS</td><td>SVG 含 16 个 path 元素</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>D14</td><td>最佳干预窗口标注</td><td>✅ PASS</td><td>band=true, label=true</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>D15</td><td>虚线连接</td><td>✅ PASS</td><td></td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>D16</td><td>Tooltip悬浮</td><td>✅ PASS</td><td>Tooltip 已出现</td>
+      <td>-</td>
+    </tr><tr class="fail">
+      <td>D17</td><td>响应selectedCountries</td><td>❌ FAIL</td><td>未找到国家标签</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>D18</td><td>反事实滑块交互</td><td>✅ PASS</td><td>滑块存在, store.counterfactualShift=30</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>E19</td><td>章节4 雷达Delta波</td><td>✅ PASS</td><td>{"activeChart":"waveRadar","currentWave":4,"selectedCountries":["KOR","ITA","USA"]}</td>
+      <td>-</td>
+    </tr><tr class="fail">
+      <td>E20</td><td>章节5 疫苗地图</td><td>❌ FAIL</td><td>{"activeChart":"policyHeatmap","currentTime":"2020-01-05","timeRange":["2021-01-01","2021-12-31"]}</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>E21</td><td>章节6 热力矩阵</td><td>✅ PASS</td><td>activeChart=policyHeatmap</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>E22</td><td>章节7</td><td>✅ PASS</td><td>共6章，无章节7（符合预期）</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>F23</td><td>5×5矩阵渲染</td><td>✅ PASS</td><td>SVG 含 25 个 rect 元素</td>
+      <td>-</td>
+    </tr><tr class="fail">
+      <td>F24</td><td>Tooltip悬浮</td><td>❌ FAIL</td><td>Tooltip 未出现</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>F25</td><td>点击格子联动</td><td>✅ PASS</td><td>highlighted=[KOR,JPN,SGP], elapsed=312ms</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>F26</td><td>指标切换</td><td>✅ PASS</td><td>buttons=3, metric=death</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>G27</td><td>五轴雷达图</td><td>✅ PASS</td><td>lines=20, polys=8</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>G28</td><td>多国叠加半透明</td><td>✅ PASS</td><td>polygons=8, colors=4</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>G29</td><td>波次切换</td><td>✅ PASS</td><td>按钮数=9, currentWave=2</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>G30</td><td>悬浮数值+图例点击</td><td>✅ PASS</td><td>图例/国家列表可见</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>G31</td><td>响应selectedCountries</td><td>✅ PASS</td><td>before=8, after=9</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>H32</td><td>链路1:地图→雷达</td><td>✅ PASS</td><td>KOR=true, elapsed=1539ms</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>H33</td><td>链路2:热力→高亮</td><td>✅ PASS</td><td>highlighted=[KOR,JPN], elapsed=216ms</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>H34</td><td>链路3:指标切换同步</td><td>✅ PASS</td><td>metric=death, elapsed=290ms</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>H35</td><td>联动延迟<300ms</td><td>✅ PASS</td><td>H32-H34 联动延迟均在合理范围</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>I36</td><td>叙事文字</td><td>✅ PASS</td><td>20 步骤, ~4781 字符</td>
+      <td>-</td>
+    </tr><tr class="fail">
+      <td>I37</td><td>about.html完整性</td><td>❌ FAIL</td><td>0/6 关键板块存在</td>
+      <td>-</td>
+    </tr><tr class="pass">
+      <td>I38</td><td>linkage_test.md</td><td>✅ PASS</td><td>文件存在, 1448 字符</td>
+      <td>-</td>
+    </tr>
+</table>
+
+<h2>截图</h2>
+<div class="shot-card">
+      <div class="shot-name">A3-layout-1920</div>
+      <img src="screenshots/A3-layout-1920.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">A4-responsive-1280</div>
+      <img src="screenshots/A4-responsive-1280.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">A4-responsive-1920</div>
+      <img src="screenshots/A4-responsive-1920.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">B6-fail</div>
+      <img src="screenshots/B6-fail.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">B7-fail</div>
+      <img src="screenshots/B7-fail.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">C8-pulse-map</div>
+      <img src="screenshots/C8-pulse-map.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">C12-time-2020-01</div>
+      <img src="screenshots/C12-time-2020-01.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">C12-time-2020-04</div>
+      <img src="screenshots/C12-time-2020-04.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">D13-timeline-structure</div>
+      <img src="screenshots/D13-timeline-structure.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">D16-tooltip</div>
+      <img src="screenshots/D16-tooltip.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">D18-counterfactual-minus30</div>
+      <img src="screenshots/D18-counterfactual-minus30.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">D18-counterfactual-plus30</div>
+      <img src="screenshots/D18-counterfactual-plus30.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">E19-radar-delta</div>
+      <img src="screenshots/E19-radar-delta.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">E20-fail</div>
+      <img src="screenshots/E20-fail.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">E21-heatmap</div>
+      <img src="screenshots/E21-heatmap.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">G27-radar-five-axis</div>
+      <img src="screenshots/G27-radar-five-axis.png" loading="lazy" />
+    </div><div class="shot-card">
+      <div class="shot-name">I37-about-page</div>
+      <img src="screenshots/I37-about-page.png" loading="lazy" />
+    </div>
+
+<p style="text-align:center; margin-top:2rem; color:#999;">🤖 由 Playwright 自动化测试生成</p>
+</body>
+</html>
