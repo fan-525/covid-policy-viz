@@ -33,10 +33,11 @@ export const useGlobalStore = defineStore('global', {
     async fetchAllData() {
       this.isLoading = true;
       try {
+        const base = import.meta.env.BASE_URL;
         const [covidRes, waveRes, centroidRes] = await Promise.all([
-          fetch('/data/merged_covid_data.json'),
-          fetch('/data/wave_features.json'),
-          fetch('/data/country_centroids.json')
+          fetch(base + 'data/merged_covid_data.json'),
+          fetch(base + 'data/wave_features.json'),
+          fetch(base + 'data/country_centroids.json')
         ]);
         
         this.covidData = await covidRes.json();

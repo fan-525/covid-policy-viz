@@ -209,7 +209,7 @@ async function initMap() {
 
   // 加载 TopoJSON
   try {
-    const resp = await fetch('/data/world-110m.json')
+    const resp = await fetch(import.meta.env.BASE_URL + 'data/world-110m.json')
     worldData = await resp.json()
   } catch (e) {
     console.error('加载世界地图数据失败:', e)

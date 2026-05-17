@@ -388,7 +388,7 @@ async function initMap() {
   height = container.clientHeight
 
   try {
-    const res = await fetch('/data/world-110m.json')
+    const res = await fetch(import.meta.env.BASE_URL + 'data/world-110m.json')
     if (!res.ok) throw new Error('地图数据加载失败')
     const worldData = await res.json()
     
