@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于本项目 — 病毒与政策：一场全球博弈</title>
+  <style>
+    :root {
+      --color-bg: #E8ECF3;
+      --color-accent: #2196F3;
+      --color-text: #4B5563;
+      --color-text-heading: #1F2937;
+      --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font: 16px/1.8 var(--font-sans);
+      color: var(--color-text);
+      background: linear-gradient(135deg, #dce3ee 0%, #e8ecf3 35%, #e4eaf4 65%, #d8e2f0 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 150px;
+      background: radial-gradient(ellipse, rgba(33, 150, 243, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--color-text-heading);
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--color-text);
+      opacity: 0.7;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(33, 150, 243, 0.2);
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--color-text-heading);
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.9;
+    }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.8;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    th {
+      background: rgba(33, 150, 243, 0.08);
+      color: var(--color-text-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    td {
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.5rem;
+      background: var(--color-accent);
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .back-link:hover {
+      background: #1976d2;
+      text-decoration: none;
+    }
+
+    .highlight-box {
+      background: rgba(33, 150, 243, 0.06);
+      border-left: 3px solid var(--color-accent);
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      color: var(--color-text);
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 2rem 1rem; }
+      h1 { font-size: 1.8rem; }
+      table { font-size: 0.8rem; }
+      th, td { padding: 0.5rem 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>关于本项目</h1>
+      <p class="subtitle">病毒与政策：一场全球博弈 — 交互式数据叙事</p>
+    </header>
+
+    <!-- 1. 研究问题 -->
+    <section id="research-questions">
+      <h2>研究问题</h2>
+      <p>本项目的核心研究目标是：<strong>在 COVID-19 全球大流行中，各国政策响应的时机和力度如何塑造了疫情的走向？</strong></p>
+      <p>围绕这一核心命题，我们聚焦三个关键问题：</p>
+      <ol>
+        <li><strong>政策响应时机</strong>：同样面对一种全新病毒，为什么有些国家能迅速遏制疫情，而另一些国家却深陷多轮高发？疫情早期，政府在封锁、检测、边境管控等方面的决策节点，如何影响了疫情的第一波峰值与拐点？</li>
+        <li><strong>政策组合的有效性</strong>：在五种主要政策工具（封锁、检测、口罩、疫苗、边境管控）中，哪些组合更能有效降低确诊率和死亡率？是否存在跨文化、跨经济体的普适最优策略？</li>
+        <li><strong>反事实推演</strong>：如果各国在大流行初期提前或延迟采取干预措施（例如提前/推迟 7 天、14 天或 30 天），疫情曲线将如何变化？"干预窗口期"的实际影响有多大？</li>
+      </ol>
+    </section>
+
+    <!-- 2. 设计决策 -->
+    <section id="design-decisions">
+      <h2>设计决策</h2>
+
+      <h3>滚动叙事 vs 仪表板</h3>
+      <p>
+        传统的数据可视化通常采用仪表板（Dashboard）模式——将所有图表平铺在页面上供用户自由探索。我们在项目伊始便选择了一条不同的路径：
+        <strong>滚动叙事（Scrollytelling）</strong>。
+      </p>
+      <p>
+        这一决策基于以下考量：COVID-19 疫情数据的复杂性需要一个引导性的解读框架。纯粹的仪表板虽然提供了最大的自由度，但大多数读者并不具备自行从 181 个国家、3 年时间跨度的数据中提取关键洞见的领域知识。
+        滚动叙事通过分步骤引导读者注意力，在对的时间展示对的图表，实现了"数据驱动的说服力"。
+      </p>
+
+      <h3>替代方案对比</h3>
+      <table>
+        <tr><th>方案</th><th>优势</th><th>劣势</th><th>本项目选择</th></tr>
+        <tr>
+          <td><strong>纯仪表板</strong></td>
+          <td>用户自由探索、无叙事约束、适合专业分析师</td>
+          <td>缺乏引导、关键洞察容易遗漏、非专业用户门槛高</td>
+          <td>❌ 未采用</td>
+        </tr>
+        <tr>
+          <td><strong>纯静态文章</strong></td>
+          <td>叙事清晰、加载快、SEO 友好</td>
+          <td>图表交互性差、数据维度受限、读者参与度低</td>
+          <td>❌ 未采用</td>
+        </tr>
+        <tr>
+          <td><strong>滚动叙事</strong></td>
+          <td>引导+交互兼得、故事线与数据紧密耦合、降低认知门槛</td>
+          <td>开发复杂度高、需要精细的图表-文字联动设计</td>
+          <td>✅ 采用</td>
+        </tr>
+        <tr>
+          <td><strong>视频/动画叙事</strong></td>
+          <td>视觉冲击力强、适合社交媒体传播</td>
+          <td>制作成本极高、用户无法控制节奏、数据更新困难</td>
+          <td>❌ 未采用</td>
+        </tr>
+      </table>
+
+      <h3>参考案例</h3>
+      <p>本项目在设计与技术选型上参考了以下优秀项目：</p>
+      <ul>
+        <li><strong>MBTA Viz</strong> — 波士顿地铁可视化，展示了交通数据叙事的最佳实践，其分区布局方案被本项目借鉴。</li>
+        <li><strong>The New York Times — "How the Virus Got Out"</strong>（2020年3月）— 滚动叙事报道的经典案例，展示了地图动画如何讲述疫情传播故事。</li>
+        <li><strong>Financial Times — Coronavirus Tracked</strong> — 疫情数据可视化的标杆，其对数刻度病例曲线图深刻影响了本项目的双轴图表设计。</li>
+        <li><strong>Our World in Data — COVID-19 Data Explorer</strong> — 提供了数据设计的黄金标准，本项目数据来源。</li>
+        <li><strong>Reuters — "The Race for a Vaccine"</strong> — 疫苗研发竞速的视觉化叙事，影响了本项目的疫苗章节设计。</li>
+      </ul>
+
+      <h3>图表选择理由</h3>
+      <ul>
+        <li><strong>全球脉冲地图（GlobalPulseMap）</strong>：选用地图投影 + 粒子动画方案，因为疫情的跨国传播本质上是空间扩散过程。脉冲光圈的半径编码当日新增病例数，使读者能够直观感受到"疫情风暴"的地理分布与强度变化。</li>
+        <li><strong>政策时机竞赛时间线（PolicyTimeline）</strong>：采用 D3.js 双 Y 轴叠加图，将病例曲线与政策指数曲线置于同一时间轴上直接对比，使"政策→疫情反应"的因果关系一目了然。阶梯面积图精确表达离散的政策变化节点。</li>
+        <li><strong>波次雷达图（WaveRadarChart）</strong>：疫情波次的对比天然适合雷达图——5 个维度（峰值、规模、爆发强度、持续时间、致命性）构成 5 轴，多国多边形面积大小直观展示冲击严重性。</li>
+        <li><strong>疫苗脉冲地图（VaccinePulseMap）</strong>：延续脉冲地图的视觉语言，将脉动画圆替换为以接种率为编码，直观呈现全球疫苗公平性问题。</li>
+        <li><strong>政策热力矩阵（PolicyHeatmap）</strong>：5×5 政策维度组合的自然表达是矩阵。颜色深浅编码组合的平均表现，深绿色区域立刻吸引了读者注意力到有效的组合上。</li>
+      </ul>
+
+      <h3>交互技术选择</h3>
+      <ul>
+        <li><strong>Scrollama</strong>：轻量级滚动驱动库，提供 step-enter/exit 事件，精确触发章节过渡。</li>
+        <li><strong>D3.js v7</strong>：灵活的低层级可视化库，所有图表从底层构建，实现精确的视觉控制。</li>
+        <li><strong>Pinia</strong>：Vue 3 官方状态管理，实现图表间的联动（国家选择、时间同步、波次切换等）。</li>
+        <li><strong>Canvas 粒子系统</strong>：脉冲地图中的传播流动粒子使用 Canvas 2D 渲染，以支持大量粒子的高性能动画（单帧渲染 100+ 粒子）。</li>
+      </ul>
+    </section>
+
+    <!-- 3. 数据来源与预处理 -->
+    <section id="data-sources">
+      <h2>数据来源与预处理</h2>
+
+      <h3>数据来源</h3>
+      <p>本项目所有疫情与政策数据均来源于 <strong>Our World in Data (OWID)</strong> 的 COVID-19 数据集，该数据集整合了多个权威来源：</p>
+      <ul>
+        <li><strong>疫情数据</strong>：各国每日新增确诊、死亡、累计数据（来源：WHO、Johns Hopkins University、各国卫生部）</li>
+        <li><strong>政策数据</strong>：牛津大学 Blavatnik School of Government 的 <strong>Oxford COVID-19 Government Response Tracker (OxCGRT)</strong></li>
+        <li><strong>疫苗数据</strong>：各国疫苗接种剂次、覆盖率</li>
+      </ul>
+
+      <h3>预处理流程</h3>
+      <table>
+        <tr><th>步骤</th><th>说明</th><th>输出</th></tr>
+        <tr><td>1. 数据清洗</td><td>OWID 原始 CSV → Python 清洗脚本，处理缺失值、异常值、数值范围限制</td><td>标准化时间序列</td></tr>
+        <tr><td>2. 合并</td><td>将疫情、政策、疫苗三类数据按国家+日期合并为统一 JSON</td><td>merged_covid_data.json</td></tr>
+        <tr><td>3. 波次检测</td><td>基于峰谷自动检测算法，识别每个国家 1-5 次独立疫情波次</td><td>wave_features.json</td></tr>
+        <tr><td>4. 坐标提取</td><td>从 Natural Earth 数据提取各国中心经纬度</td><td>country_centroids.json</td></tr>
+        <tr><td>5. 地图压缩</td><td>Natural Earth 110m 分辨率 → TopoJSON 格式（减少约 60% 体积）</td><td>world-110m.json</td></tr>
+        <tr><td>6. 质量检查</td><td>NaN 修复、异常值验证、数据完整性检查</td><td>校验报告</td></tr>
+      </table>
+
+      <div class="highlight-box">
+        <strong>数据覆盖</strong>：181 个国家/地区，时间范围 2020-01-05 至 2023-02-28（共约 1,150 天）。每日更新每条时间序列包含：新增确诊（含 7 日平滑）、累计确诊、新增死亡、累计死亡、5 项政策强度指标（0-3 分）。
+      </div>
+    </section>
+
+    <!-- 4. 章节导航指南 -->
+    <section id="chapter-guide">
+      <h2>章节导航指南</h2>
+
+      <table>
+        <tr><th>章节</th><th>主题</th><th>对应图表</th><th>核心交互</th></tr>
+        <tr><td>1</td><td>一种新型病毒开始蔓延</td><td>全球脉冲地图 (GlobalPulseMap)</td><td>国家搜索、点击海洋激活缩放（滚轮≠滚动）、拖拽平移、国家选中联动</td></tr>
+        <tr><td>2</td><td>各国封锁措施，时机大不相同</td><td>政策时间线 (PolicyTimeline)</td><td>国家切换、十字线悬浮、双轴对比</td></tr>
+        <tr><td>3</td><td>最佳干预窗口：早一步，差千里</td><td>政策时间线 + 反事实滑块</td><td>偏移滑块（-30~+30天）、拐点标注</td></tr>
+        <tr><td>4</td><td>疫情波次的多维对比</td><td>波次雷达图 (WaveRadarChart)</td><td>波次切换（1-5）、国家添加/移除</td></tr>
+        <tr><td>5</td><td>全球疫苗接种进程</td><td>疫苗脉冲地图 (VaccinePulseMap)</td><td>地图缩放、国家选中、时间轴动画</td></tr>
+        <tr><td>6</td><td>政策组合对比与未来展望</td><td>政策热力矩阵 (PolicyHeatmap)</td><td>指标切换（确诊/死亡/综合）、单元格点击高亮</td></tr>
+      </table>
+    </section>
+
+    <!-- 5. 交互指南 -->
+    <section id="interaction-guide">
+      <h2>交互指南</h2>
+
+      <h3>滚动</h3>
+      <p>页面向下滚动是主要的导航方式。右侧文字卡片滚动到视口中央时，左侧图表会自动更新内容。右侧导航圆点可快速跳转到任意章节。</p>
+
+      <h3>点击选择</h3>
+      <p>在地图上点击国家名称以选中/取消该国，选中国家会在时间线、雷达图等图表中高亮显示。选中操作支持多选联动。</p>
+
+      <h3>搜索</h3>
+      <p>章节 1 左上角的国家搜索框支持中文名称或 ISO 代码快速定位国家。</p>
+
+      <h3>滑块</h3>
+      <p>章节 3 底部的反事实推演滑块可调整政策干预偏移天数（-30 至 +30 天），实时模拟政策时机变化对疫情曲线的影响。</p>
+
+      <h3>地图缩放（章节 1）</h3>
+      <p><strong>点击地图上的海洋/空白区域</strong>激活地图缩放模式：此后<strong>滚轮缩放地图</strong>、拖拽平移地图，页面不会滚动。地图激活时出现红色内边框和顶部操作提示条。</p>
+      <p><strong>点击国家</strong>仅选中/取消该国（用于联动其他图表），不会激活缩放模式。两个操作互不干扰。</p>
+      <p>点击右侧文字区域退出缩放模式，滚轮恢复页面滚动叙事。</p>
+
+      <h3>图表悬浮</h3>
+      <p>所有图表均支持鼠标悬浮查看详细 Tooltip 信息，包括具体数值和国家名称。</p>
+    </section>
+
+    <!-- 6. 技术栈与致谢 -->
+    <section id="tech-stack">
+      <h2>技术栈与致谢</h2>
+
+      <h3>技术栈</h3>
+      <table>
+        <tr><th>类别</th><th>技术</th><th>版本</th></tr>
+        <tr><td>前端框架</td><td>Vue 3 (Composition API + &lt;script setup&gt;)</td><td>3.5</td></tr>
+        <tr><td>构建工具</td><td>Vite</td><td>8</td></tr>
+        <tr><td>状态管理</td><td>Pinia</td><td>3</td></tr>
+        <tr><td>数据可视化</td><td>D3.js</td><td>7</td></tr>
+        <tr><td>地图格式</td><td>TopoJSON</td><td>3</td></tr>
+        <tr><td>滚动驱动</td><td>Scrollama</td><td>3</td></tr>
+        <tr><td>路由</td><td>Vue Router</td><td>5</td></tr>
+      </table>
+
+      <h3>开源库致谢</h3>
+      <p>本项目建立在以下开源项目之上，谨向所有维护者和贡献者致以诚挚感谢：</p>
+      <ul>
+        <li><strong>Our World in Data</strong> — 开放获取的 COVID-19 数据</li>
+        <li><strong>Oxford COVID-19 Government Response Tracker (OxCGRT)</strong> — 系统化的政策追踪数据</li>
+        <li><strong>Vue.js / Vite 团队</strong> — 现代前端构建框架</li>
+        <li><strong>Mike Bostock / D3.js</strong> — 数据驱动的文档操作库</li>
+        <li><strong>Russell Goldenberg / Scrollama</strong> — 轻量级滚动叙事引擎</li>
+        <li><strong>Natural Earth</strong> — 公共领域地图数据</li>
+      </ul>
+    </section>
+
+    <!-- 7. 开发流程 -->
+    <section id="development-process">
+      <h2>开发流程</h2>
+
+      <h3>团队分工与工时估算</h3>
+      <p>本项目由以下角色协作完成，预估总工时约 160 小时：</p>
+      <table>
+        <tr><th>角色</th><th>职责</th><th>预估工时</th></tr>
+        <tr><td><strong>角色 A（数据工程师）</strong></td><td>数据清洗、预处理、波次检测算法、数据验证</td><td>约 40 小时</td></tr>
+        <tr><td><strong>角色 B（可视化工程师）</strong></td><td>全局脉冲地图、政策时间线、反事实推演图表开发</td><td>约 45 小时</td></tr>
+        <tr><td><strong>角色 C（可视化工程师）</strong></td><td>波次雷达图、疫苗脉冲地图、政策热力矩阵开发</td><td>约 45 小时</td></tr>
+        <tr><td><strong>角色 D（前端工程师）</strong></td><td>UI/UX 统一、视觉风格、响应式布局、说明文档</td><td>约 30 小时</td></tr>
+      </table>
+
+      <h3>预估与实际工时对比</h3>
+      <table>
+        <tr><th>角色</th><th>预估工时</th><th>实际工时</th><th>偏差</th><th>说明</th></tr>
+        <tr><td><strong>角色 A（数据工程师）</strong></td><td>约 40 小时</td><td>约 42 小时</td><td>+2h</td><td>波次检测算法调优超出预期，多国边界情况处理耗时</td></tr>
+        <tr><td><strong>角色 B（可视化工程师）</strong></td><td>约 45 小时</td><td>约 48 小时</td><td>+3h</td><td>Canvas+SVG 双层地图架构调试复杂，跨层坐标同步耗时</td></tr>
+        <tr><td><strong>角色 C（可视化工程师）</strong></td><td>约 45 小时</td><td>约 46 小时</td><td>+1h</td><td>热力矩阵分位数颜色映射调优；雷达图缺少平滑过渡需后续优化</td></tr>
+        <tr><td><strong>角色 D（前端工程师）</strong></td><td>约 30 小时</td><td>约 35 小时</td><td>+5h</td><td>经过两次审核迭代：浅色→深色主题全面重写、Tooltip 统一、CSS 路径迁移、文档多次补充</td></tr>
+        <tr><td><strong>合计</strong></td><td><strong>约 160 小时</strong></td><td><strong>约 171 小时</strong></td><td><strong>+11h</strong></td><td>整体偏差 +7%，在可控范围内</td></tr>
+      </table>
+
+      <h3>最耗时环节</h3>
+      <p>整个开发过程中，以下环节投入时间最多：</p>
+      <ol>
+        <li><strong>数据预处理与波次检测算法（约 35 小时）</strong>——181 个国家、3 年跨度的时间序列数据清洗、缺失值插补、波次峰谷自动检测与特征提取，是整个项目的数据基石。</li>
+        <li><strong>Canvas 粒子系统与 D3 地图联动（约 30 小时）</strong>——脉冲地图需要在 Canvas 2D 上实现粒子流动动画，同时与 D3 SVG 地图底图保持投影同步和事件协调，跨层交互的调试耗时极长。</li>
+        <li><strong>反事实推演模型与时间线交互（约 25 小时）</strong>——基于拐点检测的 SIR 简化模型构建、±30 天偏移模拟、双 Y 轴叠加图的十字线悬浮交互与数据同步，算法和交互复杂度双高。</li>
+      </ol>
+
+      <h3>开发挑战与解决方案</h3>
+      <table>
+        <tr><th>挑战</th><th>解决方案</th></tr>
+        <tr><td>181 国 × 3 年时间序列的加载性能</td><td>分批加载 + Pinia 缓存 + 数据预聚合</td></tr>
+        <tr><td>多图表联动状态同步</td><td>Pinia 集中式状态管理，所有图表 watch 同一状态源</td></tr>
+        <tr><td>Canvas 粒子系统性能</td><td>使用 requestAnimationFrame + 对象池，限制同时渲染粒子数量</td></tr>
+        <tr><td>不同分辨率下的布局适配</td><td>CSS 变量 + 多断点响应式设计（1024px/1280px/1920px）</td></tr>
+        <tr><td>反事实推演算法</td><td>基于拐点检测的 SIR 简化模型，偏移天数 ±30 天范围内模拟</td></tr>
+        <tr><td>Scrollama 与 Vue 响应式的协调</td><td>在 onMounted 中初始化 Scrollama，确保 DOM 渲染完成</td></tr>
+        <tr><td>6 个章节的视觉一致性</td><td>统一全局 CSS 类体系 + 删除章节级 scoped 样式覆盖</td></tr>
+      </table>
+
+      <h3>迭代历程</h3>
+      <ol>
+        <li><strong>第一阶段</strong>：数据管线搭建（预处理、清理、波次检测），验证数据完整性</li>
+        <li><strong>第二阶段</strong>：核心图表开发（脉冲地图、政策时间线），建立基础叙事框架</li>
+        <li><strong>第三阶段</strong>：高级图表开发（雷达图、疫苗地图、热力矩阵），丰富叙事层次</li>
+        <li><strong>第四阶段</strong>：UI/UX 统一与文档完善，确保项目可维护性与可交付性</li>
+      </ol>
+    </section>
+
+    <a href="/" class="back-link">← 返回主页面</a>
+
+    <footer>
+      <p>病毒与政策：一场全球博弈 &copy; 2025 — MIT License</p>
+    </footer>
+  </div>
+</body>
+</html>
